@@ -1,0 +1,42 @@
+.BurgerMenu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #9e8787;
+}
+
+.BurgerMenuContent {
+  width: 288px;
+  height: 100%;
+  margin-left: 10px;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Navigate {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 32px;
+  margin-top: 44px;
+}
+
+.active {
+  text-decoration: overline;
+  color: #0a0101;
+}
+
+.default {
+  text-decoration: none;
+  color: #161616;
+}

@@ -1,0 +1,93 @@
+.ShopCart {
+  display: flex;
+  height: 200px;
+  gap: 10px;
+}
+
+.ShopCart img {
+  width: 170px;
+  height: 160px;
+  background-color: #cecece;
+  border-radius: 4px;
+}
+
+.Text {
+  width: 200px;
+}
+
+.header {
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+  font-weight: 200;
+}
+
+.Info {
+  margin-top: 15px;
+}
+
+.SmallInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.answer {
+  color: #757575;
+}
+
+.PriceDelete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.Price {
+  display: flex;
+  gap: 5px;
+}
+.salePrice {
+  font-size: 14px;
+  text-decoration-line: line-through;
+  color: #757575;
+}
+
+.Input {
+  display: flex;
+  align-items: center;
+  background-color: #757575;
+  border-radius: 7px;
+  padding: 2px 16px;
+}
+
+.Count {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.Input button {
+  background: none;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.Minus {
+  color: #dc3d3d;
+}
+
+.Plus {
+  color: rgb(46, 223, 46);
+}
+
+.Delete {
+  font-size: 25px;
+  color: #ff2e2e;
+  transition: 0.5s;
+}
+.Delete:hover {
+  color: #dc3d3d;
+  transform: scale(1.2);
+}

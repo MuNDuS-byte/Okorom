@@ -1,0 +1,229 @@
+.Menu {
+  margin-top: 15px;
+  margin-bottom: 100px;
+}
+
+/*--MenuUp--*/
+.MenuUp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.Logo {
+  display: flex;
+  gap: 10px;
+}
+
+.MenuInfo {
+  display: flex;
+  gap: 80px;
+}
+
+.MenuInfo div {
+  display: flex;
+  gap: 32px;
+  color: #757575;
+}
+
+.active {
+  color: #0d0505;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: overline;
+}
+
+.default {
+  color: #757575;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/*--MenuBottom--*/
+
+.MenuBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.MenuRoutes {
+  display: flex;
+  gap: 48px;
+}
+
+/*--searchCart--*/
+
+.search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.searchCart h3 {
+  margin-bottom: 20px;
+}
+
+.searchCartIcon,
+.shopCartIcon {
+  padding: 10px;
+}
+
+.searchCartIcon {
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.searchCartIcon:hover,
+.searchCartActiveIcon {
+  color: #009311;
+  transform: scale(1.2);
+}
+
+/*--shopCart--*/
+
+.CartIcon {
+  position: relative;
+}
+
+.CartIcon p {
+  position: absolute;
+  left: 35px;
+  color: #26f014;
+}
+
+.shopCartIcon {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 8px;
+}
+
+.shopCartIcon:hover,
+.shopCartActiveIcon {
+  color: #ff2e2e;
+  transform: scale(1.3);
+}
+
+.shopCart,
+.searchCart {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 400px;
+  background-color: #242935;
+  color: #fff;
+  -webkit-box-shadow: 2px 4px 7px 0px rgba(75, 83, 90, 0.2);
+  -moz-box-shadow: 2px 4px 7px 0px rgba(75, 83, 90, 0.2);
+  box-shadow: 2px 4px 7px 0px rgba(75, 83, 90, 0.2);
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 15px 10px;
+}
+
+.OrderLength {
+  margin-bottom: 20px;
+}
+
+.shopCart h4 {
+  margin-bottom: 10px;
+}
+
+.Sum {
+  color: #5dc469;
+}
+
+.buyButton {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #009311;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.consultionButton {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #202226;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.BottomActive {
+  color: #3e3e3e;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  text-decoration: overline;
+}
+
+.BottomDefault {
+  color: #161616;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+}
+
+.AddaptiveBurgerMenu {
+  display: none;
+}
+
+/*--Adaptive--*/
+
+@media (max-width: 768px) {
+  .MenuInfo div {
+    display: block;
+    gap: 0px;
+  }
+
+  .InfoPadding {
+    margin-bottom: 12px;
+  }
+
+  .MenuBottom {
+    display: block;
+  }
+
+  .MenuRoutes {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .Menu {
+    margin-bottom: 40px;
+  }
+
+  .MenuRoutes,
+  .consultionButton,
+  .MenuInfo > .MenuSmallInfoRoutes {
+    display: none;
+  }
+
+  .InfoPadding {
+    margin-bottom: 2px;
+  }
+
+  .MenuBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .AddaptiveBurgerMenu {
+    display: block;
+  }
+}

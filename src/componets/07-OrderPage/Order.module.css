@@ -1,0 +1,19 @@
+.Order {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 1px 0px 10px 3px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 1px 0px 10px 3px rgba(34, 60, 80, 0.2);
+  box-shadow: 1px 0px 10px 3px rgba(34, 60, 80, 0.2);
+  width: 700px;
+}
+
+.Order h2 {
+  font-size: 28px;
+  width: 300px;
+}
+
+.CloseIcon {
+  color: #ff2e2e;
+}

@@ -1,0 +1,58 @@
+.SearchCart {
+  display: flex;
+  height: 200px;
+  gap: 10px;
+}
+
+.SearchCart img {
+  width: 170px;
+  height: 160px;
+  background-color: #cecece;
+  border-radius: 4px;
+}
+
+.Text {
+  width: 200px;
+}
+
+.header {
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
+  font-weight: 200;
+}
+
+.Info {
+  margin-top: 15px;
+}
+
+.SmallInfo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.answer {
+  color: #757575;
+}
+
+.PriceAdd {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.Price {
+  display: flex;
+  gap: 5px;
+}
+.Add {
+  font-size: 20px;
+  color: #009311;
+  transition: 0.5s;
+}
+.Add:hover {
+  color: #009311;
+  transform: scale(1.2);
+}

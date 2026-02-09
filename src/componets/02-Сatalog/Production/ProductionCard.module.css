@@ -1,0 +1,96 @@
+.ProductionCard {
+  width: 289px;
+  height: 512px;
+}
+
+.Buttons {
+  width: 257px;
+  height: 184px;
+  transition: 0.5s;
+}
+
+.Buttons:hover {
+  scale: 1.1;
+}
+
+.Buttons button {
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.SaleButton {
+  background-color: #d21924;
+}
+
+.ArmorButton {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #2949b5;
+}
+
+.PressButton {
+  background-color: #308d77;
+}
+
+.Img {
+  width: 257px;
+  height: 184px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.Header {
+  margin-top: 28px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  width: 249px;
+}
+
+.Info {
+  width: 249px;
+}
+
+.SmallInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.Apion {
+  color: #757575;
+}
+
+.Price {
+  display: flex;
+  margin-top: 40px;
+  gap: 7px;
+}
+.Price,
+.PricePadding h4 {
+  font-size: 20px;
+}
+
+.PricePadding {
+  display: flex;
+  margin-top: 60px;
+  gap: 7px;
+}
+
+.Sale {
+  font-size: 14px;
+  text-decoration-line: line-through;
+  color: #757575;
+}
+
+.PriceButton {
+  width: 249px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px 0px 12px 0px;
+  background-color: #202226;
+}

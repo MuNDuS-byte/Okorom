@@ -1,0 +1,29 @@
+.InfoGurantee {
+  width: 592px;
+}
+
+.Guarantee h2 {
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+  .InfoGurantee {
+    width: 461px;
+  }
+
+  .Guarantee h2 {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .InfoGurantee {
+    width: 100%;
+  }
+
+  .Guarantee h2 {
+    margin-top: 32px;
+    margin-bottom: 5px;
+  }
+}

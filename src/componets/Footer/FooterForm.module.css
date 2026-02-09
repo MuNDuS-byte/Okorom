@@ -1,0 +1,104 @@
+.FooterForm {
+  height: 404px;
+  border-radius: 20px;
+  background-color: #202226;
+  margin-bottom: 120px;
+}
+
+.FooterFormContent {
+  display: flex;
+  padding: 60px 40px;
+}
+
+.Text {
+  width: 451px;
+  color: #fff;
+}
+
+.FooterForm p {
+  color: #9f9f9f;
+  margin-top: 20px;
+}
+
+.Form {
+  margin-left: 117px;
+}
+
+.FooterForm input {
+  width: 552px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  outline: none;
+  color: #9f9f9f;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 16px 0px 16px 0px;
+}
+
+.InputPadding {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.FooterForm button {
+  color: #161616;
+  background-color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  padding: 12px 20px;
+  margin-top: 44px;
+}
+
+@media (max-width: 1024px) {
+  .Text {
+    width: 424px;
+  }
+
+  .Form {
+    margin-left: 16px;
+  }
+
+  .FooterForm input {
+    width: 424px;
+  }
+}
+
+@media (max-width: 768px) {
+  .FooterForm {
+    height: 600px;
+  }
+  .FooterFormContent {
+    display: block;
+    padding: 36px;
+  }
+
+  .Form {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  .Text {
+    width: 552px;
+  }
+
+  .FooterForm input {
+    width: 552px;
+  }
+}
+
+@media (max-width: 320px) {
+  .FooterForm {
+    height: 520px;
+  }
+  .FooterFormContent {
+    padding: 12px;
+  }
+  .Text,
+  .FooterForm input {
+    width: 264px;
+  }
+}

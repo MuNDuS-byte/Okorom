@@ -1,0 +1,32 @@
+.FeaturesCard {
+  display: flex;
+  align-items: center;
+}
+
+.CardImg {
+  margin-right: 34px;
+}
+
+.FeaturesCard h3 {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .Text {
+    width: 228px;
+  }
+}
+
+@media (max-width: 320px) {
+  .Text {
+    width: 232px;
+  }
+  .FeaturesCard h3 {
+    margin-top: 1px;
+  }
+
+  .CardImg {
+    margin-bottom: 40px;
+    margin-right: 22px;
+  }
+}

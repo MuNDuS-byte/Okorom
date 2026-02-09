@@ -1,0 +1,15 @@
+.InfoContact {
+  margin-top: 84px;
+}
+
+.InfoContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .InfoContent {
+    display: block;
+  }
+}
