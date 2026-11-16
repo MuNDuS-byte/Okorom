@@ -1,0 +1,36 @@
+.HeadingCompony {
+  margin-top: 60px;
+}
+
+.HeadingCompony p {
+  max-width: 592px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+  .HeadingCompony p {
+    max-width: 624px;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeadingCompony {
+    margin-top: 50px;
+  }
+
+  .HeadingCompony p {
+    max-width: 100%;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 540px) {
+  .HeadingCompony {
+    margin-top: 32px;
+  }
+
+  .HeadingCompony p {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

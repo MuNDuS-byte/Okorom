@@ -1,0 +1,18 @@
+.HeadingCatalog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.Info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.HeadingCatalog p {
+  max-width: 313px;
+  margin-top: 5px;
+}

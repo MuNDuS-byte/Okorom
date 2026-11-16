@@ -1,0 +1,16 @@
+.InfoCompony {
+  max-width: 389px;
+}
+
+@media (max-width: 1024px) {
+  .InfoCompony {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 540px) {
+  .InfoCompony {
+    max-width: 100%;
+    width: 100%;
+  }
+}

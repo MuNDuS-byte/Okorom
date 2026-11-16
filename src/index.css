@@ -5,8 +5,9 @@
 }
 
 body {
-  font-family: Golos;
+  font-family: 'Montserrat', 'Golos Text', sans-serif;
   color: #161616;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -39,7 +40,7 @@ h5 {
 p {
   font-size: 18px;
   font-weight: 400;
-  line-height: 20px; /* 125% */
+  line-height: 20px;
 }
 
 button {
@@ -50,7 +51,7 @@ input {
   outline: none;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   h1 {
     font-size: 24px;
     line-height: 28px;

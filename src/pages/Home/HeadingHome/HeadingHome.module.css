@@ -1,0 +1,199 @@
+.Heading {
+  min-height: 560px;
+  border-radius: 16px;
+  background-color: #202226;
+  color: #fff;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.HeadingContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.HeadingText {
+  flex: 1;
+  min-width: 0;
+}
+
+.Heading h1 {
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.Info {
+  width: 100%;
+  max-width: 451px;
+  color: #9f9f9f;
+}
+
+.SmallInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.Line {
+  width: 100%;
+  max-width: 451px;
+  height: 1px;
+  background: #36383c;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.Heading h2 {
+  margin-top: 40px;
+}
+
+.PriceLine {
+  width: 100%;
+  max-width: 556px;
+  height: 1px;
+  background: #36383c;
+  margin-top: 24px;
+}
+
+.Images {
+  width: 576px;
+  max-width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.Images img {
+  max-width: 90%;
+  max-height: 360px;
+  object-fit: contain;
+}
+
+.Buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.AddaptiveButtons {
+  display: none;
+}
+
+.Heading button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #161616;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.Icons {
+  display: flex;
+  gap: 5px;
+}
+
+.DivIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.Icon {
+  color: black;
+  margin-top: 13px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  .Images {
+    width: 320px;
+    height: 388px;
+  }
+
+  .Images img {
+    max-width: 296px;
+    max-height: 208px;
+  }
+
+  .Info,
+  .Line {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .Heading {
+    height: auto;
+    padding: 24px;
+  }
+
+  .HeadingContent {
+    flex-direction: column;
+  }
+
+  .HeadingText {
+    order: 2;
+  }
+
+  .PriceLine {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .AddaptiveButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+  }
+
+  .Buttons {
+    display: none;
+  }
+
+  .Images {
+    width: 100%;
+    height: 300px;
+    order: 1;
+  }
+
+  .Images img {
+    max-width: 85%;
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 540px) {
+  .Heading {
+    padding: 16px;
+  }
+
+  .Images {
+    height: 210px;
+  }
+
+  .Images img {
+    max-height: 180px;
+  }
+
+  .Heading h2 {
+    margin-top: 24px;
+  }
+
+  .AddaptiveButtons {
+    margin-top: 16px;
+  }
+}

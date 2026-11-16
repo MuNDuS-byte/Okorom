@@ -1,0 +1,55 @@
+.Info {
+  width: 100%;
+  max-width: 491px;
+}
+
+.Info h4 {
+  margin-bottom: 8px;
+}
+
+.SmallInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0px;
+}
+
+.information {
+  color: #757575;
+  width: 187px;
+  flex-shrink: 0;
+}
+
+.infotik {
+  max-width: 288px;
+}
+
+@media (max-width: 1024px) {
+  .Info {
+    margin-top: 40px;
+    max-width: 624px;
+  }
+
+  .infotik {
+    max-width: 421px;
+  }
+}
+
+@media (max-width: 540px) {
+  .Info {
+    max-width: 100%;
+    margin-top: 32px;
+  }
+
+  .SmallInfo {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 20px;
+  }
+
+  .information,
+  .infotik {
+    width: 100%;
+    max-width: 100%;
+  }
+}

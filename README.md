@@ -1,38 +1,158 @@
-# React Porject for the React Course
+# Окопром — Интернет-магазин промышленного оборудования
 
-## Available Scripts
+Клиентское веб-приложение интернет-магазина промышленного оборудования для разделки кабеля, сепараторов и комплектующих («Окопром»). Приложение предоставляет каталог продукции с многокритериальной фильтрацией, карточку товара с характеристиками и видеообзором, корзину, оформление заказа и форму обратной связи.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Ключевые возможности
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Главная страница со слайдером**: интерактивный слайдер товаров с быстрым переходом к карточке выбранного станка, витрина категорий и преимуществ.
+- **Каталог с фильтрацией в реальном времени**:
+  - регистронезависимый поиск по названию;
+  - выдвижная боковая панель фильтров (drawer);
+  - ползунок диапазона цен (`От` / `До`) с учётом скидочной цены;
+  - мультивыбор категорий (`Скидка`, `Броня`, `Пресс`, `Вся продукция`);
+  - счётчик найденных позиций и состояние пустой выдачи (`empty-state`) со сбросом фильтров.
+- **Страница товара**: подробное описание, таблица технических характеристик, встроенный видеообзор и добавление в корзину.
+- **Корзина и оформление заказа**:
+  - выпадающая мини-корзина в шапке (на десктопе) и отдельная страница корзины `/Order` с управлением количеством (`1..14`), удалением позиций и расчётом итоговой суммы;
+  - страница оформления заказа `/checkout` с валидацией контактных данных (имя, телефон с фиксированным префиксом `+7`, e-mail), выбором способа доставки и оплаты;
+  - страница подтверждения `/order-success` с номером и полной сводкой заказа.
+- **Форма консультации**: валидация полей и всплывающее уведомление об успешной отправке заявки.
+- **Адаптивная вёрстка**: поддержка десктопных (`1440px`), планшетных (`1024px`, `768px`) и мобильных (`375px`) экранов с адаптивным бургер-меню.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Стек и требования
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Стек**: React 18, React Router v6, Redux Toolkit 2, React Redux 9, React Icons, CSS Modules, Create React App (`react-scripts` 5).
+- **Требования к окружению**:
+  - Node.js `>= 18.x`
+  - npm `>= 9.x`
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Быстрый старт
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```powershell
+npm ci
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Приложение запустится в режиме разработки по адресу `http://localhost:3000`.
 
-### `npm run eject`
+> [!NOTE]
+> Проект работает полностью на клиентской стороне и не требует настройки `.env` или внешнего бэкенд-сервера.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Архитектура и структура проекта
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Проект организован по модульной **feature-based** архитектуре с однонаправленным потоком зависимостей:
+`app -> pages -> widgets -> features -> shared`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```text
+src/
+├── index.js                         # Точка входа, подключение Redux Provider
+├── index.css                        # Глобальные стили и типографика (Montserrat / Golos Text)
+├── app/                             # Инициализация приложения
+│   ├── App.jsx                      # Корневой компонент (ConsultationProvider + BrowserRouter)
+│   ├── App.css                      # Адаптивный контейнер .wrapper
+│   ├── routes.jsx                   # Декларативная таблица маршрутов
+│   └── store.js                     # Конфигурация Redux store
+├── features/                        # Доменные модули (бизнес-логика + UI)
+│   ├── cart/                        # Корзина покупателя
+│   │   ├── index.js                 # Публичный API модуля корзины
+│   │   ├── model/
+│   │   │   ├── basketSlice.js       # Redux-слайс, селекторы и ограничения количества
+│   │   │   └── useCart.js           # Хук управления корзиной (items, total, add, remove, clear, changeCount)
+│   │   └── ui/
+│   │       ├── Order.jsx            # Строка товара на странице корзины
+│   │       └── ShopCart.jsx         # Карточка товара в выпадающей мини-корзине
+│   ├── catalog/                     # Каталог и фильтрация товаров
+│   │   ├── index.js                 # Публичный API модуля каталога
+│   │   ├── model/
+│   │   │   ├── cardCatalogData.js   # Данные каталога оборудования
+│   │   │   ├── useCatalogFilter.js  # Хук поиска, фильтрации по категориям и диапазону цен
+│   │   │   ├── useProduct.js        # Хук получения товара по slug
+│   │   │   └── useProductTabs.js    # Хук переключения вкладок на странице товара
+│   │   └── ui/
+│   │       ├── Production.jsx       # Витрина каталога, поиск и боковая панель фильтров
+│   │       └── ProductionCard.jsx   # Карточка товара в сетке каталога
+│   └── consultation/                # Заявка на консультацию
+│       ├── index.js                 # Публичный API модуля консультации
+│       └── model/
+│           └── consultation.jsx     # Контекст плавной прокрутки к форме и уведомления об отправке
+├── pages/                           # Страницы маршрутизатора
+│   ├── Home/                        # Главная страница (слайдер, категории, преимущества)
+│   ├── Catalog/                     # Страница каталога (/catalog)
+│   ├── ProductPage/                 # Страница товара (/catalog/:slug)
+│   ├── Order/                       # Страница корзины (/Order)
+│   ├── Checkout/                    # Страница оформления заказа (/checkout)
+│   ├── OrderSuccess/                # Страница подтверждения заказа (/order-success)
+│   ├── Company/                     # О компании (/compony)
+│   ├── Contact/                     # Контакты (/contact)
+│   ├── ShippingPayment/             # Доставка и оплата (/shippingPayment)
+│   ├── Guarantee/                   # Гарантия (/guarantee)
+│   └── NotFound/                    # Страница 404 (*)
+├── widgets/                         # Крупные композиционные блоки
+│   ├── MainLayout/                  # Общий каркас страниц (Header + Outlet + Footer)
+│   ├── Header/                      # Шапка сайта (Menu, BurgerMenu, useHeaderPanels)
+│   └── Footer/                      # Подвал сайта и форма обратной связи (Footer, FooterForm, FooterContent)
+└── shared/                          # Переиспользуемые ресурсы, UI и конфигурация
+    ├── assets/images/               # Общие изображения и иконки
+    ├── config/navLinks.js           # Конфигурация навигационных ссылок
+    └── ui/Special.jsx               # Блок «Почему именно мы?»
+```
+
+---
+
+## Публичные интерфейсы модулей (`features`)
+
+### 1. Модуль корзины (`src/features/cart`)
+Хук `useCart()` предоставляет единый интерфейс работы с корзиной:
+
+| Поле / метод | Тип | Описание |
+| :--- | :--- | :--- |
+| `items` | `Array<Product>` | Список товаров в корзине |
+| `total` | `number` | Итоговая стоимость корзины с учётом скидок (`salePrice \|\| price`) |
+| `add(product)` | `(product) => void` | Идемпотентное добавление товара (без дублирования по `slug`) |
+| `remove(slug)` | `(slug: string) => void` | Удаление позиции из корзины по `slug` |
+| `changeCount(slug, increase)` | `(slug: string, increase: boolean) => void` | Изменение количества в пределах `1..14` |
+| `clear()` | `() => void` | Полная очистка корзины после подтверждения заказа |
+| `getUnitPrice(item)` | `(item) => number` | Расчёт актуальной цены за единицу товара |
+
+### 2. Модуль каталога (`src/features/catalog`)
+- `useCatalogFilter()` — управляет строкой поиска (`query`), мультивыбором категорий (`activeKeys`), границами цены (`priceFrom`, `priceTo`) и состоянием панели фильтров (`isDrawerOpen`).
+- `useProduct(slug)` — возвращает объект товара из каталога по его `slug`.
+- `useProductTabs()` — управляет вкладками `description`, `charis`, `video` на странице товара.
+
+### 3. Модуль консультации (`src/features/consultation`)
+- `useConsultation()` — предоставляет `ref` формы в футере, метод плавной прокрутки `scrollToConsultation()` и состояние уведомления `submitted` / `notifySubmitted()`.
+
+---
+
+## Таблица маршрутов
+
+| Маршрут | Страница | Назначение |
+| :--- | :--- | :--- |
+| `/` | `Home` | Главная страница со слайдером, категориями и преимуществами |
+| `/catalog` | `Catalog` | Каталог оборудования с поиском и боковой панелью фильтров |
+| `/catalog/:slug` | `ProductPage` | Детальная страница станка |
+| `/Order` | `OrderPage` | Корзина покупателя |
+| `/checkout` | `CheckoutPage` | Оформление заказа (контакты, доставка, оплата) |
+| `/order-success` | `OrderSuccessPage` | Подтверждение оформленного заказа |
+| `/compony` | `Compony` | О компании |
+| `/contact` | `Contact` | Контакты и реквизиты |
+| `/shippingPayment` | `ShippingPayment` | Условия доставки и оплаты |
+| `/guarantee` | `Guarantee` | Условия гарантии |
+| `*` | `NotFound` | Страница 404 |
+
+---
+
+## Доступные скрипты
+
+| Команда | Описание |
+| :--- | :--- |
+| `npm start` | Запуск dev-сервера на `http://localhost:3000` с горячей перезагрузкой |
+| `npm run build` | Сборка оптимизированного production-бандла в папку `build/` |

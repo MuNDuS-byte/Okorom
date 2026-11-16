@@ -1,0 +1,29 @@
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 944px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    max-width: 624px;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+}

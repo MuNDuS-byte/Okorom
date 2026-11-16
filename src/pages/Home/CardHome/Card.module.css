@@ -1,0 +1,30 @@
+.Card {
+  width: 100%;
+  max-width: 341px;
+  text-decoration: none;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.Card h2 {
+  color: #161616;
+  margin-bottom: 12px;
+}
+
+.Card img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .Card {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 540px) {
+  .Card {
+    max-width: 100%;
+    padding: 16px 0;
+  }
+}

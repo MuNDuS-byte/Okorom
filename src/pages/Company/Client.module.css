@@ -1,0 +1,73 @@
+.Client {
+  margin-top: 120px;
+}
+
+.Client h1 {
+  max-width: 795px;
+}
+
+.ClientContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  margin-top: 60px;
+}
+
+.Client img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Client h2 {
+  margin-bottom: 24px;
+}
+
+.Client p {
+  max-width: 491px;
+}
+
+.ClientContentBlockPadding {
+  margin-top: 60px;
+}
+
+@media (max-width: 1024px) {
+  .Client {
+    margin-top: 100px;
+  }
+
+  .ClientContent {
+    gap: 24px;
+  }
+
+  .ClientContentBlockPadding {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Client {
+    margin-top: 80px;
+  }
+
+  .ClientContent {
+    display: block;
+  }
+
+  .Client img {
+    display: none;
+  }
+
+  .Client h1,
+  .Client p {
+    max-width: 100%;
+  }
+
+  .Client h2 {
+    margin-bottom: 16px;
+  }
+
+  .ClientContentBlockPadding {
+    margin-top: 32px;
+  }
+}

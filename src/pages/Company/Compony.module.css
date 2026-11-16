@@ -1,0 +1,29 @@
+.AllInfoCompony {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 120px;
+}
+
+@media (max-width: 1024px) {
+  .AllInfoCompony {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .AllInfoCompony {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 540px) {
+  .AllInfoCompony {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 60px;
+  }
+}

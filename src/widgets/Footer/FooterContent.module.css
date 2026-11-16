@@ -1,0 +1,158 @@
+.FooterContent {
+  background-color: #f4f5f8;
+  border-radius: 20px;
+  padding: 48px 40px 32px;
+  margin-bottom: 40px;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e2e4ea;
+}
+
+.Content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.Header {
+  max-width: 389px;
+  margin-bottom: 20px;
+}
+
+.Txt h2 {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 8px;
+}
+
+.Info {
+  display: flex;
+  gap: 48px;
+}
+
+.Info > div {
+  width: 260px;
+}
+
+.Info h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.LinkList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.LinkList a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  transition: color 0.2s;
+}
+
+.LinkList a:hover {
+  color: #161616;
+}
+
+.Buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.SocialButton {
+  display: inline-block;
+  background-color: #202226;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.SocialButton:hover {
+  opacity: 0.85;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.SocialIconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.SocialIconLink:hover {
+  transform: scale(1.08);
+}
+
+.social p {
+  max-width: 210px;
+  color: #757575;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.FooterBottomText {
+  display: flex;
+  justify-content: space-between;
+  color: #757575;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #e2e4ea;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .Content {
+    flex-direction: column;
+  }
+
+  .Info {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .FooterContent {
+    padding: 32px 24px;
+  }
+
+  .Info {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .FooterBottomText {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .FooterContent {
+    padding: 20px 16px;
+  }
+
+  .Info > div {
+    width: 100%;
+  }
+}

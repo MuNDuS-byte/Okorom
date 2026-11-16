@@ -1,0 +1,30 @@
+.Info {
+  max-width: 592px;
+  margin-top: 60px;
+}
+
+.ShippingPayment h2 {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+  .Info {
+    max-width: 100%;
+  }
+
+  .ShippingPayment h2 {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  .Info {
+    width: 100%;
+    margin-top: 32px;
+  }
+
+  .ShippingPayment h2 {
+    margin-top: 28px;
+    margin-bottom: 8px;
+  }
+}

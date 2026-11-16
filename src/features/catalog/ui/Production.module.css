@@ -1,0 +1,219 @@
+.Production {
+  margin-top: 60px;
+}
+
+.Header {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.Toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.Search {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #d5d7dd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.Search:focus {
+  border-color: #202226;
+}
+
+.FilterToggle {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #202226;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.Counter {
+  color: #757575;
+  margin-bottom: 32px;
+}
+
+.Overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1999;
+}
+
+.Drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 360px;
+  max-width: 100vw;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 24px;
+  display: none;
+  flex-direction: column;
+  gap: 28px;
+  overflow-y: auto;
+  z-index: 2000;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.DrawerOpen {
+  display: flex;
+}
+
+.DrawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DrawerClose {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #f4f5f8;
+  font-size: 24px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.DrawerBlock h4 {
+  margin-bottom: 12px;
+}
+
+.PriceValue {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.RangeLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.RangeLabel input {
+  flex: 1;
+  min-width: 0;
+  accent-color: #202226;
+}
+
+.Filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Filter > button {
+  width: 100%;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 8px;
+  background-color: #f4f5f8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Filter > button:hover {
+  background-color: rgb(210, 210, 210);
+}
+
+.FilterActive {
+  background-color: #202226 !important;
+  color: #fff;
+}
+
+.DrawerFooter {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.ResetButton,
+.ApplyButton {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ResetButton {
+  background-color: #f4f5f8;
+  color: #161616;
+}
+
+.ApplyButton {
+  background-color: #202226;
+  color: #fff;
+}
+
+.ProductionContent {
+  display: block;
+}
+
+.PruductionCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 15px;
+}
+
+.Empty {
+  text-align: center;
+  padding: 60px 16px;
+  background-color: #f4f5f8;
+  border-radius: 12px;
+}
+
+.Empty p {
+  color: #757575;
+  margin: 12px 0 24px;
+}
+
+.Empty button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #202226;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .PruductionCard {
+    grid-template-columns: repeat(auto-fill, 289px);
+    justify-content: center;
+    grid-column-gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .Production {
+    margin-top: 40px;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+}

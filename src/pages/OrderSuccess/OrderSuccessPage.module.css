@@ -1,0 +1,87 @@
+.Page {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.Card {
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+  padding: 40px;
+  border: 1px solid #e2e4ea;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.Check {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #16a34a;
+  color: #fff;
+  font-size: 32px;
+  line-height: 64px;
+}
+
+.Lead {
+  margin: 16px 0 32px;
+  color: #4b5563;
+  line-height: 24px;
+}
+
+.Block {
+  margin-bottom: 24px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f4f5f8;
+  text-align: left;
+}
+
+.Block h3 {
+  margin-bottom: 12px;
+}
+
+.Block p {
+  margin-bottom: 6px;
+  line-height: 24px;
+  overflow-wrap: anywhere;
+}
+
+.Item {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  color: #4b5563;
+}
+
+.Total {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #d5d7dd;
+  color: #161616;
+  font-weight: 600;
+}
+
+.Button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background-color: #202226;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .Page {
+    padding: 0 12px;
+  }
+
+  .Card {
+    padding: 24px 16px;
+  }
+}
